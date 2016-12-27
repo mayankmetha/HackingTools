@@ -9,7 +9,7 @@ if sys.argv[1] == '-m':
 	cnt=int(sys.argv[2])
 if sys.argv[3] == '-c':
 	charlist=sys.argv[4]
-elif sys.argv[3] == '-f':
+elif sys.argv[3] == '-i':
 	fi=open(sys.argv[4],"r")
 	charlist=fi.read()
 	fi.close()

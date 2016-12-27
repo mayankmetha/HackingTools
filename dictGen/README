@@ -2,6 +2,18 @@ Initilization:
 	chmod u+x dictGen
 	sudo cp dictGen /bin/
 Usage:
-	dictGen -m <max_length> -c <charlist>
+	dictGen -m <max_length> -c <charlist> [-o <output_file>]
+	or
+	dictGen -m <max_length> -i <charlist_input_file> [-o <output_file>]
 Example:
 	dictGen -m 3 -c abc
+	dictGen -m 3 -c abc -o x
+	dictGen -m 3 -i x -o y
+	dictGen -m 3 -i x
+Default:
+	Output file name: GenList
+Flags:
+	-m	maximum string length
+	-c	character list
+	-i	input file containing character list
+	-o	output file containing dictionary list
