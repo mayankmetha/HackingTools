@@ -1,0 +1,7 @@
+Initilization:
+	chmod u+x dictGen
+	sudo cp dictGen /bin/
+Usage:
+	dictGen -m <max_length> -c <charlist>
+Example:
+	dictGen -m 3 -c abc

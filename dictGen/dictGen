@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# Author: mayankmethad
 import itertools, sys	
 charlist=''
 cnt=0
