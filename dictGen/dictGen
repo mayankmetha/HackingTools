@@ -1,15 +1,27 @@
 #!/usr/bin/python
 # Author: mayankmethad
-import itertools, sys	
+import itertools, sys, time
+sTime = time.time()	
 charlist=''
 cnt=0
+outf="GenList"
 if sys.argv[1] == '-m':
 	cnt=int(sys.argv[2])
 if sys.argv[3] == '-c':
 	charlist=sys.argv[4]
+elif sys.argv[3] == '-f':
+	fi=open(sys.argv[4],"r")
+	charlist=fi.read()
+	fi.close()
+if(len(sys.argv)>=6):
+	if sys.argv[5] == '-o':
+		outf=sys.argv[6]
+fo=open(outf,"w")
 i=1
 while i <= cnt:
 	res = itertools.product(charlist, repeat=i)
 	for j in res:
-		print ''.join(j)
+		fo.write(str(''.join(j))+"\n")
 	i=i+1
+fo.close()
+print 'Execution time: %.2f s' % (time.time()-sTime)	
