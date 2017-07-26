@@ -1,5 +1,5 @@
 # hackingTools
-Scripts to perform basic ethical hacking
+Custom scripts used in ethical hacking
 
 #MIT License
 
