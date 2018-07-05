@@ -1,5 +1,5 @@
 The following examples assums the hacker IP is 10.20.14 and use port 8080 for the connection.
-Therefore in all f these cases you need to listen for port 8080 using the foolowing command
+Therefore in all these cases you need to listen for port 8080 using the following command
 nc -vv -l -p 8080
 
 
